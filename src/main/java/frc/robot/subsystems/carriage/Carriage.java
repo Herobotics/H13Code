@@ -23,9 +23,6 @@ public class Carriage extends SubsystemBase {
   private Carriage(){
     // Set up the actuators
     motor = new VictorSP(Ports.carriage_motor);
-
-    // Set teleop as the default command
-    this.setDefaultCommand(new Teleop());
   }
 
   void setSpeed(double speed){

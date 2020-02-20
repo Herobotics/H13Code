@@ -31,14 +31,10 @@ public class Chassis extends SubsystemBase {
 
     right1 = new VictorSP(Ports.chassis_right_1);
     right2 = new VictorSP(Ports.chassis_right_2);
-
-    // Set teleop as the default command
-    this.setDefaultCommand(new Teleop());
   }
 
   // Control the chassis with tank drive with this function
   void tankDrive(double left, double right){
-    System.out.println(left + " " + right);
     left1.set(left);
     left2.set(left);
     

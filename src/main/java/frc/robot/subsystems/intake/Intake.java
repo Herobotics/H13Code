@@ -26,9 +26,6 @@ public class Intake extends SubsystemBase {
     // Set up the actuators
     axle = new VictorSP(Ports.intake_axle);
     solenoid = new Solenoid(Ports.intake_solenoid);
-
-    // Set teleop as the default command
-    this.setDefaultCommand(new Teleop());
   }
 
   boolean getExtention(){

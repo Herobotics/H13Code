@@ -19,13 +19,13 @@ public class Controller {
     private Controller(){
         driver = new Joystick(0);
         new JoystickButton(driver, GamePad.Button.A).whenPressed(new ToggleIntake());
-        new JoystickButton(driver, GamePad.Button.B).whenPressed(null /* TODO: make command */);
-        new JoystickButton(driver, GamePad.Button.B).whenReleased(null /* TODO: make command */);
+        // new JoystickButton(driver, GamePad.Button.B).whenPressed(null /* TODO: make command */);
+        // new JoystickButton(driver, GamePad.Button.B).whenReleased(null /* TODO: make command */);
     }
 
     // Get the speed we want the ball intake to move at
     public double getIntakeAxle(){
-        return driver.getRawAxis(GamePad.Axis.LT) - driver.getRawAxis(GamePad.Axis.RT);
+        return driver.getRawAxis(GamePad.Axis.RT) - driver.getRawAxis(GamePad.Axis.LT);
     }
 
     // Get our forward value for the chassis

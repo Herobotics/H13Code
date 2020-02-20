@@ -23,11 +23,8 @@ public class Shooter extends SubsystemBase {
   private Shooter() {
     // Set up the actuators
     motor = new VictorSP(Ports.shooter_motor);
-
-    // Set teleop as the default command
-    this.setDefaultCommand(new Teleop());
   }
-
+  
   void setSpeed(double speed){
     motor.set(speed);
   }
