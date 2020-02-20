@@ -8,7 +8,7 @@
 package frc.robot.subsystems.shooter;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.driver_station.Controller;
+// import frc.robot.driver_station.Controller;
 
 /**
  * An example command that uses an example subsystem.
@@ -25,7 +25,7 @@ public class Teleop extends CommandBase {
    */
   public Teleop() {
     intake = Shooter.getInstance();
-    controller = Controller.getInstance();
+    // controller = Controller.getInstance();
     addRequirements(intake);
   }
 
