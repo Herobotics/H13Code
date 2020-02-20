@@ -7,10 +7,10 @@ import frc.robot.subsystems.intake.togglesolenoid;
 import frc.robot.subsystems.intake.axle;
 
 public class Controller{
-    
+
     public static final int port_pilot_controller = 0;
     public static final int port_copilot_controller = 1;
-    
+
     private static Controller instance;
     public static Controller getInstance(){
         if(instance == null){
@@ -28,14 +28,14 @@ public class Controller{
         new JoystickButton(pilot, GamePad.Button.A).whenPressed(new togglesolenoid());
         new JoystickButton(pilot, GamePad.Button.B).whenPressed(new shooter(1.0));
         new JoystickButton(pilot, GamePad.Button.B).whenReleased(new shooter(0));
-        
-        public static double get_Triggers() {
-            final double value = pilot.getRawAxis(2) - pilot.getRawAxis(3);
-            SmartDashboard.putNumber("axle speed",value);
-            return value;
-        }
     }
-    
+
+    public static double get_Triggers() {
+        final double value = pilot.getRawAxis(2) - pilot.getRawAxis(3);
+        SmartDashboard.putNumber("axle speed",value);
+        return value;
+    }
+
     //gives triggers and buttons functions
 
     private void DriverController() {
