@@ -10,7 +10,10 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.commands.Teleop;
+import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.carriage.Carriage;
+import frc.robot.subsystems.chassis.Chassis;
+import frc.robot.subsystems.shooter.Shooter;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -28,7 +31,10 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    teleopCommand = new Teleop();
+    Chassis.getInstance();
+    Carriage.getInstance();
+    Intake.getInstance();
+    Shooter.getInstance();
   }
 
   /**

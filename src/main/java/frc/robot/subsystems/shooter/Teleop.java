@@ -16,7 +16,7 @@ import frc.robot.driver_station.Controller;
 public class Teleop extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Shooter intake;
-  private final Controller controller;
+  // private final Controller controller;
 
   /**
    * Creates a new ExampleCommand.
