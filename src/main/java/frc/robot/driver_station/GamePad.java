@@ -1,4 +1,4 @@
-package frc.robot.driverStation;
+package frc.robot.driver_station;
 
 public class GamePad {
 

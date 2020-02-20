@@ -1,6 +1,5 @@
-package frc.robot.subsystems.intake;
+package frc.robot.subsystems;
 
-import frc.robot.Ports;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -17,15 +16,10 @@ public class Intake extends SubsystemBase {
     }
 
     Talon motor;
-    Solenoid solenoid;
-    //creates a new motor and solenoid, and returns the instance of the intake
+    Solenoid solinoid;
+
     private Intake(){
-        motor = new Talon(Ports.ball_intake_axle);
-        solenoid = new Solenoid(Ports.ball_intake_solenoid);
+        motor = new Talon(4);
+        solinoid = new Solenoid(0);
     }
-	public boolean getExtention() {
-		return false;
-	}
-	public void setExtention(boolean b) {
-	}
 }
