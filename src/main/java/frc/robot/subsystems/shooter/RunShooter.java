@@ -1,4 +1,4 @@
-package frc.robot.subsystems.carriage;
+package frc.robot.subsystems.shooter;
 
 import edu.wpi.first.wpilibj2.command.Command;
 
@@ -12,7 +12,7 @@ public class RunShooter {
     }
 
     protected void initialize() {
-    	Carriage.getInstance().RunShooter(speed);
+    	Shooter.getInstance().runShooter(speed);
     }
 
     protected boolean isFinished() {

@@ -25,7 +25,7 @@ public class Shooter extends SubsystemBase {
     motor = new VictorSP(Ports.shooter_motor);
   }
   
-  void setSpeed(double speed){
+  void runShooter(double speed){
     motor.set(speed);
   }
 }
