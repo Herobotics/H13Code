@@ -19,6 +19,8 @@ public class Controller {
     private Controller(){
         driver = new Joystick(0);
         new JoystickButton(driver, GamePad.Button.A).whenPressed(new ToggleIntake());
+        new JoystickButton(driver, GamePad.Button.RIGHT_PRESS).whenPressed(new CarriageSpeed(1.0));
+        new JoystickButton(driver, GamePad.Button.RIGHT_PRESS).whenPressed(new CarriageSpeed(0.0));
         // new JoystickButton(driver, GamePad.Button.B).whenPressed(null /* TODO: make command */);
         // new JoystickButton(driver, GamePad.Button.B).whenReleased(null /* TODO: make command */);
     }

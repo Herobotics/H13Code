@@ -24,8 +24,8 @@ public class Carriage extends SubsystemBase {
     // Set up the actuators
     motor = new VictorSP(Ports.carriage_motor);
   }
-
-  void setSpeed(double speed){
+  
+  public void carriageSpeed(double speed){
     motor.set(speed);
   }
 }
