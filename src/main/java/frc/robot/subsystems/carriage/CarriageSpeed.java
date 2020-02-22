@@ -1,8 +1,9 @@
 package frc.robot.subsystems.carriage;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class CarriageSpeed {
+public class CarriageSpeed extends CommandBase {
 
 	double speed;
 	
@@ -11,11 +12,11 @@ public class CarriageSpeed {
         this.speed = speed;
     }
 
-    protected void initialize() {
+    public void initialize() {
     	Carriage.getInstance().carriageSpeed(speed);
     }
 
-    protected boolean isFinished() {
+    public boolean isFinished() {
         return true;
     }
 }

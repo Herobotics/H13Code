@@ -1,8 +1,9 @@
 package frc.robot.subsystems.shooter;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class RunShooter {
+public class RunShooter extends CommandBase {
 
 	double speed;
 	
@@ -11,11 +12,11 @@ public class RunShooter {
         this.speed = speed;
     }
 
-    protected void initialize() {
+    public void initialize() {
     	Shooter.getInstance().runShooter(speed);
     }
 
-    protected boolean isFinished() {
+    public boolean isFinished() {
         return true;
     }
 }
