@@ -19,6 +19,7 @@ public class Ports {
     // PCM ports (solenoids): 
 
     public static final int intake_solenoid = 1;
+    public static final int window_solenoid = 2;
 
     // DIO ports (sensors):
 
