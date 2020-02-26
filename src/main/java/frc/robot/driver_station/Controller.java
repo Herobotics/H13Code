@@ -26,7 +26,6 @@ public class Controller {
         new JoystickButton(driver, GamePad.Button.RB).whenPressed(new CarriageSpeed(0));
         new JoystickButton(driver, GamePad.Button.B).whenPressed(new RunShooter(1));
         new JoystickButton(driver, GamePad.Button.B).whenReleased(new RunShooter(0));
-        new JoystickButton(driver, GamePad.Button.Y).whenPressed(new ToggleWindow());
         new JoystickButton(driver, GamePad.Button.LB).whenPressed(new CarriageSpeed(-1));
         new JoystickButton(driver, GamePad.Button.LB).whenPressed(new CarriageSpeed(0));
     }

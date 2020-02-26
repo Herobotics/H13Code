@@ -14,7 +14,8 @@ public class Ports {
 
     public static final int carriage_motor = 5;
 
-    public static final int shooter_motor = 6;
+    public static final int shooter_motor_1 = 6;
+    public static final int shooter_motor_2 = 7;
 
     // PCM ports (solenoids): 
 

@@ -1,6 +1,8 @@
 package frc.robot.subsystems.carriage;
 
-import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.Relay.Direction;
+import edu.wpi.first.wpilibj.Relay.Value;
+import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import frc.robot.Ports;
@@ -17,15 +19,20 @@ public class Carriage extends SubsystemBase {
   }
 
   // All actuators on the intake
-  VictorSP motor;
-
+  Relay motor;
   // Creates a new Intake. This method should only be called once
   private Carriage(){
     // Set up the actuators
-    motor = new VictorSP(Ports.carriage_motor);
+    motor = new Relay(Ports.carriage_motor);
   }
   
   public void carriageSpeed(double speed){
-    motor.set(speed);
+    motor.setDirection(Direction.kForward);
+    motor.set(Value(speed)); 
   }
+
+  private Value Value(double speed) {
+    return null;
+  }
+
 }
