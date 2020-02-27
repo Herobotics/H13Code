@@ -22,12 +22,12 @@ public class Controller {
     private Controller(){
         driver = new Joystick(0);
         new JoystickButton(driver, GamePad.Button.A).whenPressed(new ToggleIntake());
-        new JoystickButton(driver, GamePad.Button.RB).whenPressed(new CarriageSpeed(1));
-        new JoystickButton(driver, GamePad.Button.RB).whenPressed(new CarriageSpeed(0));
-        new JoystickButton(driver, GamePad.Button.B).whenPressed(new RunShooter(1));
-        new JoystickButton(driver, GamePad.Button.B).whenReleased(new RunShooter(0));
-        new JoystickButton(driver, GamePad.Button.LB).whenPressed(new CarriageSpeed(-1));
-        new JoystickButton(driver, GamePad.Button.LB).whenPressed(new CarriageSpeed(0));
+        new JoystickButton(driver, GamePad.Button.RB).whenPressed(new RunShooter(1));
+        new JoystickButton(driver, GamePad.Button.RB).whenPressed(new RunShooter(0));
+        new JoystickButton(driver, GamePad.Button.B).whenPressed(new CarriageSpeed(1));
+        new JoystickButton(driver, GamePad.Button.B).whenReleased(new CarriageSpeed(0));
+        new JoystickButton(driver, GamePad.Button.LB).whenPressed(new RunShooter(-1));
+        new JoystickButton(driver, GamePad.Button.LB).whenPressed(new RunShooter(0));
     }
 
     // Get the speed we want the ball intake to move at

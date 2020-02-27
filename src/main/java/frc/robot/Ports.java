@@ -12,10 +12,11 @@ public class Ports {
 
     public static final int intake_axle = 4;
 
-    public static final int carriage_motor = 5;
+    public static final int shooter_motor_1 = 5;
+    public static final int shooter_motor_2 = 6;
 
-    public static final int shooter_motor_1 = 6;
-    public static final int shooter_motor_2 = 7;
+    // Relay ports
+    public static final int carriage_motor = 0;
 
     // PCM ports (solenoids): 
 
