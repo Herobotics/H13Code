@@ -25,8 +25,8 @@ public class DriveTime extends CommandBase {
    */
   public DriveTime(double timeout) {
     chassis = Chassis.getInstance();
-	addRequirements(chassis);
-	withTimeout(timeout);
+    addRequirements(chassis);
+    withTimeout(timeout);
   }
 
   // Called when the command is initially scheduled.
