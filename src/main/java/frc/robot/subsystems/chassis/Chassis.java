@@ -8,7 +8,7 @@ import frc.robot.Ports;
 public class Chassis extends SubsystemBase {
 
   // This variable and function are for managing and accessing the chasses anywhere in the code
-  private static Chassis instance;
+  public static Chassis instance;
   public static Chassis getInstance(){
     if(instance == null){
       instance = new Chassis();
@@ -89,4 +89,12 @@ public class Chassis extends SubsystemBase {
 
     this.tankDrive(left, right);
   }
+
+public double getRotation() {
+	return 0;
+}
+
+public double getAverageDistance() {
+	return 0;
+}
 }
