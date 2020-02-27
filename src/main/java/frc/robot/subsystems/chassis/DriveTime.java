@@ -30,7 +30,7 @@ public class DriveTime extends CommandBase {
   }
 
   // Called when the command is initially scheduled.
-  // @Override
+  // @Overrides
   // public void initialize() {
 
   // }
@@ -41,7 +41,7 @@ public class DriveTime extends CommandBase {
     chassis.arcadeDrive(1, 0);
   }
 
-  public void end​(boolean interrupted){
+  public void end(boolean interrupted) {
     chassis.arcadeDrive(0, 0);
   }
 

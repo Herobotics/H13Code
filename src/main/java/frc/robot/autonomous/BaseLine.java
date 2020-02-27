@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandGroupBase;
 import frc.robot.subsystems.chassis.DriveTime;
 
-public class BaseLine extends CommandGroupBase {
+public abstract class BaseLine extends CommandGroupBase {
 
     // public BaseLine() {
     //     addSequential(new DriveTime(AutoDistances.BaseLine.DRIVE_TIME));
