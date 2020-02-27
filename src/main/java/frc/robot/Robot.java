@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.intake.Intake;
 import frc.robot.subsystems.carriage.Carriage;
 import frc.robot.subsystems.chassis.Chassis;
+import frc.robot.subsystems.chassis.DriveTime;
 import frc.robot.subsystems.shooter.Shooter;
 
 /**
@@ -68,12 +69,11 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    // autonomousCommand = robotContainer.getAutonomousCommand();
+    autonomousCommand = new DriveTime(10);
 
-    // schedule the autonomous command (example)
-    // if (autonomousCommand != null) {
-    //   autonomousCommand.schedule();
-    // }
+    if (autonomousCommand != null) {
+      autonomousCommand.schedule();
+    }
   }
 
   /**
@@ -81,6 +81,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousPeriodic() {
+    CommandScheduler.getInstance().schedule();
   }
 
   @Override
@@ -106,12 +107,5 @@ public class Robot extends TimedRobot {
   public void testInit() {
     // Cancels all running commands at the start of test mode.
     CommandScheduler.getInstance().cancelAll();
-  }
-
-  /**
-   * This function is called periodically during test mode.
-   */
-  @Override
-  public void testPeriodic() {
   }
 }
