@@ -69,7 +69,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    autonomousCommand = new DriveTime(10);
+    autonomousCommand = new BaseLine();
 
     if (autonomousCommand != null) {
       autonomousCommand.schedule();
