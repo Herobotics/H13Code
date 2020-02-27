@@ -15,6 +15,7 @@ import frc.robot.subsystems.carriage.Carriage;
 import frc.robot.subsystems.chassis.Chassis;
 import frc.robot.subsystems.chassis.DriveTime;
 import frc.robot.subsystems.shooter.Shooter;
+import frc.robot.autonomous.AutoDistances;
 import frc.robot.autonomous.BaseLine;
 
 /**
@@ -70,7 +71,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    autonomousCommand = new BaseLine();
+    autonomousCommand = new DriveTime(AutoDistances.BaseLine.DRIVE_TIME);
 
     if (autonomousCommand != null) {
       autonomousCommand.schedule();
