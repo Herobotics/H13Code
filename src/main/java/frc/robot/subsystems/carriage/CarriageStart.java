@@ -1,19 +1,18 @@
 package frc.robot.subsystems.carriage;
 
+import com.fasterxml.jackson.annotation.JacksonInject.Value;
+
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class CarriageSpeed extends CommandBase {
-
-	double speed;
+public class CarriageStart extends CommandBase {
 	
-    public CarriageSpeed (double speed) {
+    public CarriageStart () {
         Carriage.getInstance();
-        this.speed = speed;
     }
 
     public void initialize() {
-    	Carriage.getInstance().carriageSpeed(speed);
+        Carriage.getInstance().carriageStart();
     }
 
     public boolean isFinished() {

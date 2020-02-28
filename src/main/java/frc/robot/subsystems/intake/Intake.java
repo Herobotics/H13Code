@@ -36,7 +36,7 @@ public class Intake extends SubsystemBase {
     solenoid.set(b);
   }
 
-  void setSpeed(double speed){
-    axle.setSpeed(speed);
+  void intakeAxle(double speed){
+    axle.set(speed);
   }
 }

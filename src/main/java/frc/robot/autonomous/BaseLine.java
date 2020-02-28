@@ -8,13 +8,16 @@ import frc.robot.subsystems.chassis.DriveTime;
 
 public abstract class BaseLine extends CommandGroupBase {
 
-    // public BaseLine() {
-    //     addSequential(new DriveTime(AutoDistances.BaseLine.DRIVE_TIME));
-    // }
+    public BaseLine() {
+        addSequential(new DriveTime(AutoDistances.BaseLine.DRIVE_TIME));
+    }
 
-	// @Override
-	// public void addCommands(Command... commands) {
-	// 	// TODO Auto-generated method stub
+	private void addSequential(DriveTime driveTime) {
+	}
+
+	@Override
+	public void addCommands(Command... commands) {
+	// TODO Auto-generated method stub
 		
-	// }
+	}
 }

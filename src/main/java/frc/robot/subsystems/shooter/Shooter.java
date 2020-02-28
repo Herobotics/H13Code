@@ -41,8 +41,8 @@ public class Shooter extends SubsystemBase {
     windowsolenoid.set(b);
   }
 
-  void runShooter(double speed) {
+  void setSpeed(double speed) {
     lmotor.set(speed);
-    rmotor.set(speed);
+    rmotor.set(-speed);
   }
 }

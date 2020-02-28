@@ -7,7 +7,9 @@
 
 package frc.robot.subsystems.shooter;
 
+
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.driver_station.Controller;
 // import frc.robot.driver_station.Controller;
 
 /**
@@ -15,7 +17,8 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
  */
 public class Teleop extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final Shooter intake;
+  private final Shooter shooter;
+  private final Controller controller;
   // private final Controller controller;
 
   /**
@@ -24,14 +27,15 @@ public class Teleop extends CommandBase {
    * @param subsystem The subsystem used by this command.
    */
   public Teleop() {
-    intake = Shooter.getInstance();
-    // controller = Controller.getInstance();
-    addRequirements(intake);
+    shooter = Shooter.getInstance();
+    controller = Controller.getInstance();
+    addRequirements(shooter);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {
+  public void execute() {    
+    shooter.setSpeed(controller.getShooter());
   }
 
   // Returns true when the command should end.

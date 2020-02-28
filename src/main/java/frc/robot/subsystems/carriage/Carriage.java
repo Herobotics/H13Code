@@ -17,22 +17,17 @@ public class Carriage extends SubsystemBase {
     }
     return instance;
   }
-
-  // All actuators on the intake
   Relay motor;
-  // Creates a new Intake. This method should only be called once
   private Carriage(){
     // Set up the actuators
     motor = new Relay(Ports.carriage_motor);
   }
+
+  public void carriageStart() {
+    motor.set(Relay.Value.kForward);
+  }
   
-  public void carriageSpeed(double speed){
-    motor.setDirection(Direction.kForward);
-    motor.set(Value(speed)); 
+  public void carriageStop() {
+    motor.set(Relay.Value.kOff);
   }
-
-  private Value Value(double speed) {
-    return null;
-  }
-
 }

@@ -32,7 +32,6 @@ public class Teleop extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    intake.setSpeed(controller.getIntakeAxle());
   }
 
   // Returns true when the command should end.
