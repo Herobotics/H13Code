@@ -16,7 +16,7 @@ import frc.robot.subsystems.chassis.Chassis;
 import frc.robot.subsystems.chassis.DriveTime;
 import frc.robot.subsystems.shooter.Shooter;
 import frc.robot.autonomous.AutoDistances;
-import frc.robot.autonomous.BaseLine;
+import edu.wpi.first.cameraserver.CameraServer;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -37,7 +37,10 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().setDefaultCommand(Carriage.getInstance(), new frc.robot.subsystems.carriage.Teleop());
     CommandScheduler.getInstance().setDefaultCommand(Intake.getInstance(), new frc.robot.subsystems.intake.Teleop());
     CommandScheduler.getInstance().setDefaultCommand(Shooter.getInstance(), new frc.robot.subsystems.shooter.Teleop());
+    CameraServer.getInstance().startAutomaticCapture();
+    CameraServer.getInstance().startAutomaticCapture();
   }
+
 
   /**
    * This function is called every robot packet, no matter the mode. Use this for items like
